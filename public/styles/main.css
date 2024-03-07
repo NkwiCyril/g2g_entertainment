@@ -13,9 +13,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Figtree", sans-serif;
+  scroll-behavior: smooth;
 }
 
+/* ================================================================== */
 /* section 1: navigation and the artist image and song transitioning */
+/* ================================================================ */
 
 .hero {
   background-image: url(../images/vintage_player_2.jpg);
@@ -33,6 +36,9 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 10px 5rem;
+  background-color: var(--gg-black-primary);
+  border-bottom: 2px solid var(--gg-secondary-color);
+  z-index: 1;
 }
 
 /* g2g logo */
@@ -127,7 +133,7 @@ header {
   text-decoration: none;
   border-bottom: 3px solid white;
   font-weight: 300;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 .listen-now a:hover {
@@ -165,3 +171,41 @@ header {
   font-size: 15px;
   font-weight: 200;
 }
+
+/* ============================================ */
+/* section 2: About G2G entertainment industry */
+/* ===========================================*/
+
+.about-us {
+  height: 100vh;
+  color: var(--gg-white-primary);
+  background-color: black;
+  overflow: hidden;
+  position: relative;
+  /* padding: 5rem 0 10rem 0; */
+}
+.about-heading {
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.about-us h1 {
+  font-size: 10rem;
+  font-weight: 300;
+}
+
+/* about and logo part of the about */
+
+.about-logo {
+    display: flex;
+    
+}
+
+.about-p {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: 300;
+}
+

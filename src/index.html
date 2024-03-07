@@ -14,45 +14,46 @@
       src="https://kit.fontawesome.com/14d1b7c22f.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <title>G2G Entertainment</title>
   </head>
-
   <body>
     <main>
+      <header>
+        <div class="g2g-logo">
+          <a href="./index.html">
+            <img src="/public/images/grass2grace.png" alt="g2g_pro_logo" />
+          </a>
+        </div>
+        <div class="navbar">
+          <ul class="nav-items">
+            <li class="nav-item"><a href="">Home</a></li>
+            <li class="nav-item"><a href="#about">About Us</a></li>
+            <li class="nav-item"><a href="">Artists</a></li>
+            <li class="nav-item"><a href="">Music</a></li>
+            <li class="nav-item"><a href="">Contact</a></li>
+          </ul>
+        </div>
+        <div class="social-media">
+          <div class="media">
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+          </div>
+          <div class="media">
+            <a href=""><i class="fa-brands fa-spotify"></i></a>
+          </div>
+          <div class="media">
+            <a href=""><i class="fa-brands fa-soundcloud"></i></a>
+          </div>
+          <div class="media">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+          </div>
+          <div class="media">
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </header>
       <section class="hero artist-display">
-        <header>
-          <div class="g2g-logo">
-            <a href="./index.html">
-              <img src="/public/images/grass2grace.png" alt="g2g_pro_logo" />
-            </a>
-          </div>
-          <div class="navbar">
-            <ul class="nav-items">
-              <li class="nav-item"><a href="">Home</a></li>
-              <li class="nav-item"><a href="">About Us</a></li>
-              <li class="nav-item"><a href="">Artists</a></li>
-              <li class="nav-item"><a href="">Music</a></li>
-              <li class="nav-item"><a href="">Contact</a></li>
-            </ul>
-          </div>
-          <div class="social-media">
-            <div class="media">
-              <a href=""><i class="fa-brands fa-youtube"></i></a>
-            </div>
-            <div class="media">
-              <a href=""><i class="fa-brands fa-spotify"></i></a>
-            </div>
-            <div class="media">
-              <a href=""><i class="fa-brands fa-soundcloud"></i></a>
-            </div>
-            <div class="media">
-              <a href=""><i class="fa-brands fa-facebook"></i></a>
-            </div>
-            <div class="media">
-              <a href=""><i class="fa-brands fa-instagram"></i></a>
-            </div>
-          </div>
-        </header>
         <aside class="intro-music">
           <div class="listen-now">
             <h2><a href="">Listen Now</a></h2>
@@ -72,46 +73,36 @@
           </div> -->
         </aside>
       </section>
+      <section class="about-us" id="about">
+        <div class="about-heading">
+          <h1>About Us</h1>
+        </div>
+        <div class="about-logo">
+          <div class="about-p">
+            <p>
+              Grass2Grace (G2G) isn't just a record label; it's a movement, a
+              journey from humble beginnings to soaring heights, a testament to
+              the power of passion and perseverance in the world of music. With
+              a vision as vast as the open sky and a mission to nurture raw
+              talent into polished gems, G2G stands as a beacon of hope for
+              aspiring artists everywhere. From the crackle of vinyl to the
+              digital beats of today, G2G has remained at the forefront of
+              innovation, seamlessly blending tradition with modernity to create
+              timeless melodies that resonate with the soul. With each release,
+              G2G doesn't just produce music; it crafts experiences, tells
+              stories, and builds bridges between hearts and minds. As the world
+              spins on its axis, G2G remains steadfast in its commitment to
+              elevate voices, amplify dreams, and ultimately, transform lives
+              through the universal language of music.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
+  <script src="/scripts/script.js"></script>
   <script>
-    var images = [
-      'url("/public/images/rema_image.jpg")',
-      'url("/public/images/starr_image.jpg")',
-      'url("/public/images/starr2_image.jpg")',
-    ];
-
-    var music = [
-			{
-				image: 'url("/public/images/rema_image.jpg")',
-				music_title: "Infatuated",
-				artist_name: "Valdo Dalow"
-			},
-			 {
-				image: 'url("/public/images/starr_image.jpg")',
-				music_title: "Change",
-				artist_name: "ML"
-			 },
-			 {
-				image: 'url("/public/images/starr2_image.jpg")',
-				music_title: "Change",
-				artist_name: "ML"
-			 },
-		];
-
-    var currentIndex = 0;
-
-    function changeBg() {
-      $(".hero").fadeOut(1000, function () {
-        $(this).css("background-image", music[currentIndex].image);
-				$(".music-title h1").text(music[currentIndex].music_title);
-				$(".music-title h5").text(music[currentIndex].artist_name);
-        $(this).fadeIn(1000);
-      });
-      currentIndex = (currentIndex + 1) % images.length;
-    }
-
-    setInterval(changeBg, 10000);
+    
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </html>
