@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Homemade+Apple&family=Manrope:wght@200..800&family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Homemade+Apple&family=Manrope:wght@200..800&family=Pacifico&display=swap");
 :root {
   --gg-primary-color: #ff0000;
   --gg-secondary-color: #bc0404;
@@ -35,9 +35,9 @@ header {
   padding: 10px 5rem;
 }
 
+/* g2g logo */
 .g2g-logo {
   max-width: 8rem;
-  border-right: 3px solid var(--gg-white-primary);
   padding-right: 30px;
 }
 
@@ -47,16 +47,16 @@ header {
   cursor: pointer;
 }
 
+/* navigation */
 .navbar {
   height: min-content;
-  padding: 0;
 }
 
 .navbar li {
   list-style-type: none;
   font-size: 17px;
   font-weight: 600;
-  padding: 7px ;
+  padding: 7px;
   cursor: pointer;
 }
 
@@ -93,6 +93,7 @@ header {
   width: 100%;
 }
 
+/* social media icons */
 .social-media {
   display: flex;
   align-items: center;
@@ -111,24 +112,56 @@ header {
   color: var(--gg-secondary-color);
 }
 
+/* music title and play button */
 .intro-music {
   display: flex;
   align-items: end;
   justify-content: space-between;
   padding: 0px 5rem;
   position: relative;
-  margin: 10rem 0;
+  top: 10rem;
 }
 
-.intro-music a {
+.listen-now a {
   color: var(--gg-white-primary);
   text-decoration: none;
   border-bottom: 3px solid white;
+  font-weight: 300;
+  font-size: .8em;
+}
 
+.listen-now a:hover {
+  border-bottom: 3px solid var(--gg-secondary-color);
+}
+
+.music-title {
+  text-align: right;
 }
 
 .music-title h1 {
   color: var(--gg-white-primary);
-  font-size: 5rem;
+  font-size: 8rem;
+  font-weight: 300;
+  text-align: end;
+}
 
+.music-title h5 {
+  color: white;
+}
+
+/* highlight of song lyrics */
+
+.lyric {
+  width: fit-content;
+  position: relative;
+  color: rgba(255, 255, 255, 0.5);
+  rotate: -10deg;
+  bottom: 9rem;
+  left: 40em;
+  padding: 10px;
+}
+
+.lyric h6 {
+  font-size: 15px;
+  font-weight: 200;
 }

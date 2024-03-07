@@ -10,9 +10,13 @@
       integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
       crossorigin="anonymous"
     />
-    <script src="https://kit.fontawesome.com/14d1b7c22f.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/14d1b7c22f.js"
+      crossorigin="anonymous"
+    ></script>
     <title>G2G Entertainment</title>
   </head>
+
   <body>
     <main>
       <section class="hero artist-display">
@@ -32,24 +36,82 @@
             </ul>
           </div>
           <div class="social-media">
-            <div class="media"><a href=""><i class="fa-brands fa-youtube"></i></a> </div>
-            <div class="media"><a href=""><i class="fa-brands fa-spotify"></i></a></div>
-            <div class="media"><a href=""><i class="fa-brands fa-soundcloud"></i></a></div>
-            <div class="media"><a href=""><i class="fa-brands fa-facebook"></i></a></div>
-            <div class="media"><a href=""><i class="fa-brands fa-instagram"></i></a></div>
+            <div class="media">
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="media">
+              <a href=""><i class="fa-brands fa-spotify"></i></a>
+            </div>
+            <div class="media">
+              <a href=""><i class="fa-brands fa-soundcloud"></i></a>
+            </div>
+            <div class="media">
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <div class="media">
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
           </div>
         </header>
-        <!-- <aside class="intro-music">
+        <aside class="intro-music">
           <div class="listen-now">
-            <h3><a href="">LISTEN NOW</a></h3>
+            <h2><a href="">Listen Now</a></h2>
           </div>
           <div class="music-title">
-            <h1>INFATUATED</h1>
+            <h1>Infatuated</h1>
+            <h5>Valdo Dalow</h5>
           </div>
-        </aside> -->
+        </aside>
+        <aside>
+          <!-- <div class="lyric">
+            <h6>
+              you don't sound like others <br />
+              you don't follow others <br />
+              you just dey make me infatuated
+            </h6>
+          </div> -->
+        </aside>
       </section>
     </main>
   </body>
-  <script src="/scripts/script.js"></script>
+  <script>
+    var images = [
+      'url("/public/images/rema_image.jpg")',
+      'url("/public/images/starr_image.jpg")',
+      'url("/public/images/starr2_image.jpg")',
+    ];
+
+    var music = [
+			{
+				image: 'url("/public/images/rema_image.jpg")',
+				music_title: "Infatuated",
+				artist_name: "Valdo Dalow"
+			},
+			 {
+				image: 'url("/public/images/starr_image.jpg")',
+				music_title: "Change",
+				artist_name: "ML"
+			 },
+			 {
+				image: 'url("/public/images/starr2_image.jpg")',
+				music_title: "Change",
+				artist_name: "ML"
+			 },
+		];
+
+    var currentIndex = 0;
+
+    function changeBg() {
+      $(".hero").fadeOut(1000, function () {
+        $(this).css("background-image", music[currentIndex].image);
+				$(".music-title h1").text(music[currentIndex].music_title);
+				$(".music-title h5").text(music[currentIndex].artist_name);
+        $(this).fadeIn(1000);
+      });
+      currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    setInterval(changeBg, 10000);
+  </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </html>
