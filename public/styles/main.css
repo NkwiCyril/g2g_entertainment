@@ -35,30 +35,33 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 5rem;
-  background-color: var(--gg-black-primary);
+  align-items: center;
+  padding: 1px 5rem;
+  background-color: black;
   border-bottom: 2px solid var(--gg-secondary-color);
-  z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: fit-content;
+  z-index: 2;
 }
 
 /* g2g logo */
 .g2g-logo {
-  max-width: 8rem;
-  padding-right: 30px;
+  max-width: 4rem;
 }
 
 .g2g-logo img {
-  width: 100%;
+  width:100%;
   object-fit: cover;
   cursor: pointer;
 }
 
 /* navigation */
-.navbar {
-  height: min-content;
+.nav-bar {
+  height: fit-content;
 }
 
-.navbar li {
+.nav-bar li {
   list-style-type: none;
   font-size: 17px;
   font-weight: 600;
@@ -66,7 +69,7 @@ header {
   cursor: pointer;
 }
 
-.navbar a {
+.nav-bar a {
   text-decoration: none;
   color: var(--gg-white-primary);
 }
@@ -75,8 +78,9 @@ header {
   display: flex;
   align-items: center;
   justify-items: center;
+  padding: 0;
+  height: fit-content;
   gap: 25px;
-  padding-top: 10px;
 }
 
 .nav-item {
@@ -90,7 +94,7 @@ header {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 3px;
+  height: 2px;
   background-color: var(--gg-secondary-color);
   transition: width 0.3s ease;
 }
@@ -125,7 +129,7 @@ header {
   justify-content: space-between;
   padding: 0px 5rem;
   position: relative;
-  top: 10rem;
+  top: 20rem;
 }
 
 .listen-now a {
@@ -207,5 +211,66 @@ header {
   margin: 0 auto;
   font-size: 20px;
   font-weight: 300;
+}
+
+
+/* contact section styli */
+/* Header styles */
+#contact {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  height: 100vh;
+}
+
+/* Main styles */
+.contact {
+  color: var(--gg-black-primary);
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+button[type="submit"] {
+  background-color: var(--gg-black-primary);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #1c1c1c;
 }
 
