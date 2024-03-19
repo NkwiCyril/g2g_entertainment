@@ -204,8 +204,7 @@ header .toggle-btn:hover {
   color: var(--gg-white-primary);
   background-color: black;
   overflow: hidden;
-  position: relative;
-  /* padding: 5rem 0 10rem 0; */
+  padding: 5rem 0 5rem 0;
 }
 .about-heading {
   max-width: fit-content;
@@ -218,10 +217,6 @@ header .toggle-btn:hover {
 }
 
 /* about and logo part of the about */
-
-.about-logo {
-  display: flex;
-}
 
 .about-p {
   text-align: center;
@@ -299,6 +294,9 @@ button[type="submit"]:hover {
 
 /* responsive to mobile devices */
 @media (min-width: 319px) and (max-width: 480px) {
+  /* =================================== */
+  /* ==== HERO AND HEADER SECTION ====== */
+
   .hero {
     background-size: cover; /* Ensure image covers entire screen */
     background-attachment: fixed;
@@ -309,7 +307,7 @@ button[type="submit"]:hover {
   }
 
   header {
-    padding: 10px;
+    padding: 10px 15px;
   }
 
   .g2g-logo {
@@ -348,10 +346,34 @@ button[type="submit"]:hover {
     scale: 2;
   }
 
+  /* =================================== */
+  /* ======== ABOUT SECTION =========== */
+
+  .about-us {
+    width: 100%;
+    height: 80vh;
+  }
+
+  .about-heading {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .about-heading h1 {
+    font-size: 5rem;
+  }
+
+  .about-p {
+    text-align: left;
+    width: 85%;
+    font-size: 17px;
+  }
 }
 
 /* responsive to tablets and ipads */
 @media (min-width: 481px) and (max-width: 1200px) {
+  /* =================================== */
+  /* ==== HERO AND HEADER SECTION ====== */
   .hero {
     background-size: cover; /* Ensure image covers entire screen */
     background-attachment: fixed;
@@ -378,7 +400,7 @@ button[type="submit"]:hover {
     text-align: center;
   }
   .intro-music h1 {
-    font-size: 10rem;
+    font-size: 7rem;
   }
 
   .intro-music h5 {
