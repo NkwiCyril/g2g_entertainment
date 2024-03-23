@@ -26,6 +26,7 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  transition: all ease-in-out .3s;
 }
 
 .artist-display {
@@ -300,6 +301,7 @@ button[type="submit"]:hover {
   .hero {
     background-size: cover; /* Ensure image covers entire screen */
     background-attachment: fixed;
+    height: 90vh;
   }
   .nav-bar,
   .social-media {
@@ -351,7 +353,7 @@ button[type="submit"]:hover {
 
   .about-us {
     width: 100%;
-    height: 80vh;
+    height: 100vh;
   }
 
   .about-heading {
@@ -361,10 +363,11 @@ button[type="submit"]:hover {
 
   .about-heading h1 {
     font-size: 5rem;
+    /* padding-bottom: 10px; */
   }
 
   .about-p {
-    text-align: left;
+    text-align: center;
     width: 85%;
     font-size: 17px;
   }
@@ -377,6 +380,7 @@ button[type="submit"]:hover {
   .hero {
     background-size: cover; /* Ensure image covers entire screen */
     background-attachment: fixed;
+    height: 100vh;
   }
   .nav-bar,
   .social-media {
@@ -384,7 +388,7 @@ button[type="submit"]:hover {
   }
 
   header {
-    padding: 10px;
+    padding: 10px 20px;
   }
 
   .g2g-logo {
@@ -418,20 +422,38 @@ button[type="submit"]:hover {
 
   .listen-now a:hover {
     background-color: #333;
-    scale: 2;
+  }
+
+  /* =================================== */
+  /* ======== ABOUT SECTION =========== */
+
+  .about-us {
+    width: 100%;
+    height: 85vh;
+  }
+
+  .about-heading {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .about-heading h1 {
+    font-size: 7rem;
+    padding-bottom: 10px;
+  }
+
+  .about-p {
+    text-align: center;
+    width: 85%;
   }
 }
 
 /* responsive to PCs and macs */
 @media (min-width: 1201px) and (max-width: 1600px) {
-  .hero {
-    background-color: limegreen;
-  }
+
 }
 
 /* responsive to desktops */
 @media (min-width: 1601px) {
-  .hero {
-    background-color: seagreen;
-  }
+
 }
